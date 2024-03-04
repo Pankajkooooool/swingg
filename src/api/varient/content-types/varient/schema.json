@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "varients",
+  "info": {
+    "singularName": "varient",
+    "pluralName": "varients",
+    "displayName": "varient"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_varient_id": {
+      "type": "uid",
+      "required": true
+    },
+    "product_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "varient_id"
+    }
+  }
+}
